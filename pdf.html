@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      .cat-grid,
+      #instructions {
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        display: grid;
+        width: 8.5in;
+
+        img,
+        div {
+          height: calc(11in / 4);
+          margin: 0;
+          display: block;
+        }
+
+        .back {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .qr {
+          width: 2in;
+          height: 2in;
+        }
+      }
+
+      .spread-cat {
+        width: 100%;
+        text-align: center;
+        width: 2.2in;
+        font-family: "Comic Sans MS";
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cat-grid">
+      <img src="favicon/android-chrome-512x512.png" />
+      <img src="favicon/android-chrome-512x512.png" />
+      <img src="favicon/android-chrome-512x512.png" />
+      <img src="favicon/android-chrome-512x512.png" />
+      <img src="favicon/android-chrome-512x512.png" />
+      <img src="favicon/android-chrome-512x512.png" />
+      <img src="favicon/android-chrome-512x512.png" />
+      <img src="favicon/android-chrome-512x512.png" />
+      <img src="favicon/android-chrome-512x512.png" />
+      <img src="favicon/android-chrome-512x512.png" />
+      <img src="favicon/android-chrome-512x512.png" />
+      <img src="favicon/android-chrome-512x512.png" />
+    </div>
+    <div id="instructions"></div>
+    <script>
+      const instr = document.getElementById("instructions");
+
+      const slogans = [
+        "Spread the mind virus.",
+        "Want to post this cat?",
+        "Get more information when you least expected it:",
+        "Download more cats here:",
+        "Scan this QR code to get rickrolled:",
+        "post this qr code when they least expect it",
+        "Join Us.",
+      ];
+
+      for (let i = 0; i < 12; i++) {
+        instr.innerHTML += `<div class="back"><span class="spread-cat">${slogans[i]}</span> <img class="qr" src="./qr.gif"></div>`;
+      }
+    </script>
+  </body>
+</html>
