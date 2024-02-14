@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <style>
@@ -14,8 +14,9 @@
         grid-template-columns: repeat(3, 1fr);
         display: grid;
         width: 8.5in;
-        grid-gap: 1px;
-        margin-bottom: 1px;
+        gap: 1px;
+        place-items: center;
+        background-color: white;
 
         img,
         div {
@@ -63,10 +64,6 @@
         text-align: center;
         width: 2.2in;
         font-family: "Comic Sans MS";
-      }
-
-      .cat-grid img::after {
-        content: "fireisgood.github.io/post-this-cat";
       }
     </style>
   </head>
