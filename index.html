@@ -98,34 +98,39 @@
         </ul>
       </section>
     </main>
+
     <button onclick="showModal()">Print This Cat</button>
+
     <modal style="display: none" id="print-modal">
       <div class="modal-header">
         <button class="x-button" onclick="hideModal()">⨯</button>
       </div>
-      <h2>Choose Your Fighter</h2>
-      <div class="modal-columns">
-        <a
-          class="print-opt"
-          onclick="printpdf('./post-this-cat-two-sided.pdf')"
-        >
-          <h3>Two-Sided</h3>
-          <div class="modal-imgs">
-            <img src="./pdf-preview-front.png" />
-            <img src="./pdf-preview-back.png" />
-          </div>
-        </a>
-        <a
-          class="print-opt"
-          onclick="printpdf('./post-this-cat-one-sided.pdf')"
-        >
-          <h3>One-Sided</h3>
-          <div class="modal-imgs">
-            <img src="./pdf-preview-front.png" />
-          </div>
-        </a>
+      <div class="modal-content">
+        <h1>Choose Your Fighter</h1>
+        <div class="modal-columns">
+          <a
+            class="print-opt"
+            onclick="printpdf('./post-this-cat-two-sided.pdf')"
+          >
+            <h3>Two-Sided</h3>
+            <div class="modal-imgs">
+              <img src="./pdf-preview-front.png" />
+              <img src="./pdf-preview-back.png" />
+            </div>
+          </a>
+          <a
+            class="print-opt"
+            onclick="printpdf('./post-this-cat-one-sided.pdf')"
+          >
+            <h3>One-Sided</h3>
+            <div class="modal-imgs">
+              <img src="./pdf-preview-front.png" />
+            </div>
+          </a>
+        </div>
       </div>
     </modal>
+
     <script>
       function printpdf(url) {
         const iframe = document.createElement("iframe");
@@ -140,7 +145,7 @@
 
       const pm = document.getElementById("print-modal");
       function showModal() {
-        pm.style.display = "block";
+        pm.style.display = "grid";
       }
       function hideModal() {
         pm.style.display = "none";
