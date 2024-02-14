@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -40,11 +40,11 @@
   <body>
     <main>
       <h1>post this cat when they least expect it</h1>
-      <div class="main-columns">
-        <section class="print-this-cat">
-          <h2>Print This Cat!</h2>
-          <a
-            onclick="{
+
+      <section class="print-this-cat">
+        <h2>Print This Cat!</h2>
+        <a
+          onclick="{
           // const win = window.open('./post-this-cat.pdf');
           // win.print();
           const iframe = document.createElement('iframe');
@@ -56,30 +56,31 @@
             iframe.contentWindow.print(); 
           }
         }"
-            href="#"
-            class="print-link"
-          >
-            <img src="./pdf-preview.png" />
-          </a>
-        </section>
-        <section>
-          <h2>Guidelines</h2>
-          <ul>
-            <li>
-              <strong>Unexpected</strong> &mdash; Whoever finds this cat
-              <em>must not think they will find it</em> when they find it.
-            </li>
-            <li>
-              <strong>Shocking</strong> &mdash; The act of finding this cat must
-              feel surprising.
-            </li>
-            <li>
-              <strong>Non-Disruptive</strong> &mdash; Finding this cat shall not
-              infringe on others' tasks or activities.
-            </li>
-          </ul>
-        </section>
-      </div>
+          href="#"
+          class="print-link"
+        >
+          Print This Cat
+        </a>
+        <img src="./pdf-preview.png" alt="Cat image PDF" />
+      </section>
+
+      <section>
+        <h2>Guidelines</h2>
+        <ul>
+          <li>
+            <strong>Unexpected</strong> &mdash; Whoever finds this cat
+            <em>must not think they will find it</em> when they find it.
+          </li>
+          <li>
+            <strong>Shocking</strong> &mdash; The act of finding this cat must
+            feel surprising.
+          </li>
+          <li>
+            <strong>Non-Disruptive</strong> &mdash; Finding this cat shall not
+            infringe on others' tasks or activities.
+          </li>
+        </ul>
+      </section>
     </main>
     <modal>
       <h2>Choose Your Fighter</h2>
