@@ -32,22 +32,33 @@
 }
 
 .print-opt {
+  --shadow-color: #aaaa;
   display: flex;
+  height: min-content;
   padding: 0.5rem 1rem 1rem;
   flex-direction: column;
   align-items: center;
   cursor: pointer;
 
-  box-shadow: 0 2px 16px #aaaa;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px var(--shadow-color);
+
+  transition: all var(--speed-fast) ease;
+
+  &:hover {
+    --shadow-color: #444a;
+  }
 }
 
 .modal-imgs {
   display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
   justify-content: center;
   padding-top: 1rem;
 
   & img {
-    width: 11rem;
+    height: min(25vw, 420px);
   }
 }
 
