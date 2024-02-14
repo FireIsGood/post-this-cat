@@ -1,10 +1,112 @@
+/** Basic styles **/
+/* Box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margins (optional) */
+* {
+  margin: 0;
+}
+
+/* Fix line height and font rendering */
+body {
+  color: #454545;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Fix media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  font-style: italic;
+}
+
+/* Fix input styles */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Fix text overflow */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* Fix link colors */
+:where(a) {
+  color: #07a;
+  text-underline-offset: 0.2em;
+}
+:where(a):visited {
+  color: #941352;
+}
+
+/** Variables **/
 :root {
-  font-family: sans-serif;
+  --font-normal: Charter, "Bitstream Charter", "Sitka Text", Cambria, serif;
+
+  /* Font sizes */
+  --font-scale: 1.25;
+  --p: 1rem;
+  --h5-size: calc(var(--p) * var(--font-scale));
+  --h4-size: calc(var(--h5-size) * var(--font-scale));
+  --h3-size: calc(var(--h4-size) * var(--font-scale));
+  --h2-size: calc(var(--h3-size) * var(--font-scale));
+  --h1-size: calc(var(--h2-size) * var(--font-scale));
+
+  /* Sizes */
+  --main-max-width: 1060px;
+  --main-margin: 1rem;
+}
+
+body {
+  padding-top: 1rem;
 }
 
 main {
-  width: 50em;
-  margin: auto;
+  width: min(var(--main-max-width), 100% - 2 * var(--main-margin));
+  margin-inline: auto;
+  font-family: var(--font-normal);
+}
+
+main > * + * {
+  margin-top: 1em;
+}
+
+/* Element styles */
+h1 {
+  text-align: center;
+  font-size: var(--h1-size);
+}
+h2 {
+  font-size: var(--h2-size);
+}
+h3 {
+  font-size: var(--h3-size);
+}
+h4 {
+  font-size: var(--h4-size);
+}
+h5 {
+  font-size: var(--h5-size);
 }
 
 .print-link img {
