@@ -6,3 +6,32 @@ main {
   width: 50em;
   margin: auto;
 }
+
+.print-link img {
+  height: 30em;
+}
+
+.main-columns {
+  display: flex;
+}
+
+section {
+  margin-right: 3em;
+}
+
+@media (max-width: 50em) {
+  .main-columns {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  main {
+    width: 90%;
+  }
+
+  .print-this-cat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
