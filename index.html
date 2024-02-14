@@ -42,20 +42,42 @@
     <main>
       <h1>post this cat when they least expect it</h1>
 
-      <section class="print-this-cat">
-        <h2>Print This Cat!</h2>
-        <a
-          onclick="{
-          // const win = window.open('./post-this-cat.pdf');
-          // win.print();
-     
-        }"
-          href="#"
-          class="print-link"
-        >
-          Print This Cat
-        </a>
-        <img src="./pdf-preview.png" alt="Cat image PDF" />
+      <section class="hero">
+        <div class="hero-text">
+          <h2>Print This Cat!</h2>
+          <ul class="hero-list">
+            <li>Spread the <del>word</del> cat</li>
+            <li>Do a mild-to-moderate amoount of trolling</li>
+            <li class="list-special">They will never expect it</li>
+          </ul>
+        </div>
+        <div class="button-container">
+          <a
+            onclick="{
+                // const win = window.open('./post-this-cat.pdf');
+                // win.print();
+                const iframe = document.createElement('iframe');
+                iframe.src = './post-this-cat-two-sided.pdf';
+                iframe.style.display = 'none';
+                document.body.appendChild(iframe);
+                iframe.focus();
+                iframe.onload = () => {
+                  iframe.contentWindow.print(); 
+                }
+              }"
+            href="#"
+            class="print-link"
+          >
+            Print This Cat
+          </a>
+        </div>
+        <div class="hero-image-wrapper">
+          <img
+            class="hero-image"
+            src="./pdf-preview-front.png"
+            alt="Cat image PDF"
+          />
+        </div>
       </section>
 
       <section>
