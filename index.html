@@ -47,14 +47,7 @@
           onclick="{
           // const win = window.open('./post-this-cat.pdf');
           // win.print();
-          const iframe = document.createElement('iframe');
-          iframe.src = './post-this-cat-two-sided.pdf';
-          iframe.style.display = 'none';
-          document.body.appendChild(iframe);
-          iframe.focus();
-          iframe.onload = () => {
-            iframe.contentWindow.print(); 
-          }
+     
         }"
           href="#"
           class="print-link"
@@ -82,18 +75,53 @@
         </ul>
       </section>
     </main>
-    <modal>
+    <button onclick="showModal()">Print This Cat</button>
+    <modal style="display: none" id="print-modal">
+      <div class="modal-header">
+        <button class="x-button" onclick="hideModal()">⨯</button>
+      </div>
       <h2>Choose Your Fighter</h2>
       <div class="modal-columns">
-        <div>
+        <a
+          class="print-opt"
+          onclick="printpdf('./post-this-cat-two-sided.pdf')"
+        >
           <h3>Two-Sided</h3>
-          <img src="./pdf-preview-two-sided.png" />
-        </div>
-        <div>
+          <div class="modal-imgs">
+            <img src="./pdf-preview-front.png" />
+            <img src="./pdf-preview-back.png" />
+          </div>
+        </a>
+        <a
+          class="print-opt"
+          onclick="printpdf('./post-this-cat-one-sided.pdf')"
+        >
           <h3>One-Sided</h3>
-          <img src="./pdf-preview-one-sided.png" />
-        </div>
+          <div class="modal-imgs">
+            <img src="./pdf-preview-front.png" />
+          </div>
+        </a>
       </div>
     </modal>
+    <script>
+      function printpdf(url) {
+        const iframe = document.createElement("iframe");
+        iframe.src = url;
+        iframe.style.display = "none";
+        document.body.appendChild(iframe);
+        iframe.focus();
+        iframe.onload = () => {
+          iframe.contentWindow.print();
+        };
+      }
+
+      const pm = document.getElementById("print-modal");
+      function showModal() {
+        pm.style.display = "block";
+      }
+      function hideModal() {
+        pm.style.display = "none";
+      }
+    </script>
   </body>
 </html>
