@@ -52,24 +52,7 @@
           </ul>
         </div>
         <div class="button-container">
-          <a
-            onclick="{
-                // const win = window.open('./post-this-cat.pdf');
-                // win.print();
-                const iframe = document.createElement('iframe');
-                iframe.src = './post-this-cat-two-sided.pdf';
-                iframe.style.display = 'none';
-                document.body.appendChild(iframe);
-                iframe.focus();
-                iframe.onload = () => {
-                  iframe.contentWindow.print(); 
-                }
-              }"
-            href="#"
-            class="print-link"
-          >
-            Print This Cat
-          </a>
+          <button onclick="showModal()">Print This Cat</button>
         </div>
         <div class="hero-image-wrapper">
           <img
@@ -99,9 +82,7 @@
       </section>
     </main>
 
-    <button onclick="showModal()">Print This Cat</button>
-
-    <modal style="display: none" id="print-modal">
+    <dialog style="display: none" id="print-modal">
       <div class="modal-header">
         <button class="x-button" onclick="hideModal()">⨯</button>
       </div>
@@ -129,7 +110,7 @@
           </a>
         </div>
       </div>
-    </modal>
+    </dialog>
 
     <script>
       function printpdf(url) {
