@@ -5,6 +5,7 @@
       body {
         margin: 0;
         padding: 0;
+        background-color: #777777;
       }
 
       .cat-grid,
@@ -13,16 +14,19 @@
         grid-template-columns: repeat(3, 1fr);
         display: grid;
         width: 8.5in;
+        grid-gap: 1px;
+        margin-bottom: 1px;
 
         img,
         div {
-          height: calc(11in / 4);
+          background-color: white;
+          height: calc(11in / 4 - 2px);
           margin: 0;
           display: block;
         }
 
         .url {
-          transform: translate(0.25in, -0.3in);
+          transform: translate(0.1in, -0.3in);
           -webkit-text-stroke: 0.5px black;
           /* text-stroke: 4px black; */
           /* color: white; */
@@ -43,6 +47,14 @@
         .qr {
           width: 2in;
           height: 2in;
+          filter: contrast(9999);
+        }
+
+        .qr-small {
+          width: 0.5in;
+          height: 0.5in;
+          margin-top: -0.625in;
+          margin-left: 2.17in;
         }
       }
 
@@ -62,8 +74,8 @@
     <div id="cat-grid" class="cat-grid"></div>
     <div id="instructions"></div>
     <script>
-      const sides = 2;
-      const url = "fireisgood.github.io/post-this-cat";
+      const sides = 1;
+      const url = "cat.robert.zip";
 
       if (sides == 2) {
         const instr = document.getElementById("instructions");
@@ -94,7 +106,7 @@
         catgrid.innerHTML += `
         
       <div><img src="favicon/android-chrome-512x512.png" />
-      ${sides == 1 ? `<div class="url">${url}</div></div>` : ""}
+      ${sides == 1 ? `<img class="qr-small" src="./qr.gif"></div>` : ""}
       `;
       }
     </script>
