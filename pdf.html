@@ -5,6 +5,7 @@
       body {
         margin: 0;
         padding: 0;
+        background-color: #777777;
       }
 
       .cat-grid,
@@ -13,12 +14,27 @@
         grid-template-columns: repeat(3, 1fr);
         display: grid;
         width: 8.5in;
+        grid-gap: 1px;
+        margin-bottom: 1px;
 
         img,
         div {
-          height: calc(11in / 4);
+          background-color: white;
+          height: calc(11in / 4 - 2px);
           margin: 0;
           display: block;
+        }
+
+        .url {
+          transform: translate(0.1in, -0.3in);
+          -webkit-text-stroke: 0.5px black;
+          /* text-stroke: 4px black; */
+          /* color: white; */
+          font-size: 13px;
+          -webkit-text-fill-color: white;
+          font-weight: 900;
+          font-family: "Comic Sans MS";
+          text-shadow: 0px 0px 6px black;
         }
 
         .back {
@@ -31,6 +47,14 @@
         .qr {
           width: 2in;
           height: 2in;
+          filter: contrast(9999);
+        }
+
+        .qr-small {
+          width: 0.5in;
+          height: 0.5in;
+          margin-top: -0.625in;
+          margin-left: 2.17in;
         }
       }
 
@@ -40,44 +64,50 @@
         width: 2.2in;
         font-family: "Comic Sans MS";
       }
+
+      .cat-grid img::after {
+        content: "fireisgood.github.io/post-this-cat";
+      }
     </style>
   </head>
   <body>
-    <div class="cat-grid">
-      <img src="favicon/android-chrome-512x512.png" />
-      <img src="favicon/android-chrome-512x512.png" />
-      <img src="favicon/android-chrome-512x512.png" />
-      <img src="favicon/android-chrome-512x512.png" />
-      <img src="favicon/android-chrome-512x512.png" />
-      <img src="favicon/android-chrome-512x512.png" />
-      <img src="favicon/android-chrome-512x512.png" />
-      <img src="favicon/android-chrome-512x512.png" />
-      <img src="favicon/android-chrome-512x512.png" />
-      <img src="favicon/android-chrome-512x512.png" />
-      <img src="favicon/android-chrome-512x512.png" />
-      <img src="favicon/android-chrome-512x512.png" />
-    </div>
-    <div id="instructions" style="display: none"></div>
+    <div id="cat-grid" class="cat-grid"></div>
+    <div id="instructions"></div>
     <script>
-      const instr = document.getElementById("instructions");
+      const sides = 1;
+      const url = "cat.robert.zip";
 
-      const slogans = [
-        "Spread the mind virus.",
-        "Want to post this cat?",
-        "Get more information when you least expected it:",
-        "Download more cats here:",
-        "Scan this QR code to get rickrolled:",
-        "post this qr code when they least expect it",
-        "Join Us.",
-        "Post the cat yourself:",
-        "the cat shalt be fruitful and multiply",
-        "waiter, more cats please",
-        "meow",
-        "I CAN HAZ CATS????",
-      ];
+      if (sides == 2) {
+        const instr = document.getElementById("instructions");
+
+        const slogans = [
+          "Spread the mind virus.",
+          "Want to post this cat?",
+          "Get more information when you least expected it:",
+          "Download more cats here:",
+          "Scan this QR code to get rickrolled:",
+          "post this qr code when they least expect it",
+          "Join Us.",
+          "Post the cat yourself:",
+          "the cat shalt be fruitful and multiply",
+          "waiter, more cats please",
+          "meow",
+          "I CAN HAZ CATS????",
+        ];
+
+        for (let i = 0; i < 12; i++) {
+          instr.innerHTML += `<div class="back"><span class="spread-cat">${slogans[i]}</span> <img class="qr" src="./qr.gif"></div>`;
+        }
+      }
+
+      const catgrid = document.getElementById("cat-grid");
 
       for (let i = 0; i < 12; i++) {
-        instr.innerHTML += `<div class="back"><span class="spread-cat">${slogans[i]}</span> <img class="qr" src="./qr.gif"></div>`;
+        catgrid.innerHTML += `
+        
+      <div><img src="favicon/android-chrome-512x512.png" />
+      ${sides == 1 ? `<img class="qr-small" src="./qr.gif"></div>` : ""}
+      `;
       }
     </script>
   </body>
