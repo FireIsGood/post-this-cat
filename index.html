@@ -44,8 +44,16 @@
           <h2>Print This Cat!</h2>
           <a
             onclick="{
-          const win = window.open('./post-this-cat.pdf');
-          win.print();
+          // const win = window.open('./post-this-cat.pdf');
+          // win.print();
+          const iframe = document.createElement('iframe');
+          iframe.src = './post-this-cat.pdf';
+          iframe.style.display = 'none';
+          document.body.appendChild(iframe);
+          iframe.focus();
+          iframe.onload = () => {
+            iframe.contentWindow.print(); 
+          }
         }"
             href="#"
             class="print-link"
