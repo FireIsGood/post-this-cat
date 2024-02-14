@@ -21,6 +21,18 @@
           display: block;
         }
 
+        .url {
+          transform: translate(0.25in, -0.3in);
+          -webkit-text-stroke: 0.5px black;
+          /* text-stroke: 4px black; */
+          /* color: white; */
+          font-size: 13px;
+          -webkit-text-fill-color: white;
+          font-weight: 900;
+          font-family: "Comic Sans MS";
+          text-shadow: 0px 0px 6px black;
+        }
+
         .back {
           display: flex;
           flex-direction: column;
@@ -40,44 +52,50 @@
         width: 2.2in;
         font-family: "Comic Sans MS";
       }
+
+      .cat-grid img::after {
+        content: "fireisgood.github.io/post-this-cat";
+      }
     </style>
   </head>
   <body>
-    <div class="cat-grid">
-      <img src="favicon/android-chrome-512x512.png" />
-      <img src="favicon/android-chrome-512x512.png" />
-      <img src="favicon/android-chrome-512x512.png" />
-      <img src="favicon/android-chrome-512x512.png" />
-      <img src="favicon/android-chrome-512x512.png" />
-      <img src="favicon/android-chrome-512x512.png" />
-      <img src="favicon/android-chrome-512x512.png" />
-      <img src="favicon/android-chrome-512x512.png" />
-      <img src="favicon/android-chrome-512x512.png" />
-      <img src="favicon/android-chrome-512x512.png" />
-      <img src="favicon/android-chrome-512x512.png" />
-      <img src="favicon/android-chrome-512x512.png" />
-    </div>
-    <div id="instructions" style="display: none"></div>
+    <div id="cat-grid" class="cat-grid"></div>
+    <div id="instructions"></div>
     <script>
-      const instr = document.getElementById("instructions");
+      const sides = 2;
+      const url = "fireisgood.github.io/post-this-cat";
 
-      const slogans = [
-        "Spread the mind virus.",
-        "Want to post this cat?",
-        "Get more information when you least expected it:",
-        "Download more cats here:",
-        "Scan this QR code to get rickrolled:",
-        "post this qr code when they least expect it",
-        "Join Us.",
-        "Post the cat yourself:",
-        "the cat shalt be fruitful and multiply",
-        "waiter, more cats please",
-        "meow",
-        "I CAN HAZ CATS????",
-      ];
+      if (sides == 2) {
+        const instr = document.getElementById("instructions");
+
+        const slogans = [
+          "Spread the mind virus.",
+          "Want to post this cat?",
+          "Get more information when you least expected it:",
+          "Download more cats here:",
+          "Scan this QR code to get rickrolled:",
+          "post this qr code when they least expect it",
+          "Join Us.",
+          "Post the cat yourself:",
+          "the cat shalt be fruitful and multiply",
+          "waiter, more cats please",
+          "meow",
+          "I CAN HAZ CATS????",
+        ];
+
+        for (let i = 0; i < 12; i++) {
+          instr.innerHTML += `<div class="back"><span class="spread-cat">${slogans[i]}</span> <img class="qr" src="./qr.gif"></div>`;
+        }
+      }
+
+      const catgrid = document.getElementById("cat-grid");
 
       for (let i = 0; i < 12; i++) {
-        instr.innerHTML += `<div class="back"><span class="spread-cat">${slogans[i]}</span> <img class="qr" src="./qr.gif"></div>`;
+        catgrid.innerHTML += `
+        
+      <div><img src="favicon/android-chrome-512x512.png" />
+      ${sides == 1 ? `<div class="url">${url}</div></div>` : ""}
+      `;
       }
     </script>
   </body>
