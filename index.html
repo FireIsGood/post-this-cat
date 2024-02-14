@@ -58,24 +58,13 @@
           </ul>
         </div>
         <div class="button-container">
-          <a
-            onclick="{
-                // const win = window.open('./post-this-cat.pdf');
-                // win.print();
-                const iframe = document.createElement('iframe');
-                iframe.src = './post-this-cat-two-sided.pdf';
-                iframe.style.display = 'none';
-                document.body.appendChild(iframe);
-                iframe.focus();
-                iframe.onload = () => {
-                  iframe.contentWindow.print(); 
-                }
-              }"
+          <button
+            onclick="{showModal()}"
             href="#"
             class="print-link"
           >
             Print This Cat
-          </a>
+          </button>
         </div>
         <div class="hero-image-wrapper">
           <img
@@ -108,8 +97,6 @@
         </ul>
       </section>
     </main>
-
-    <button onclick="showModal()">Print This Cat</button>
 
     <modal style="display: none" id="print-modal">
       <button class="x-button" onclick="hideModal()">⨯</button>
