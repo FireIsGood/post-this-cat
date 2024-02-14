@@ -67,6 +67,11 @@
 
     transition: all var(--speed-medium) ease-out;
   }
+
+  & > :last-child {
+    translate: -15% 0;
+    box-shadow: 2px 4px 8px 0 #0007;
+  }
 }
 .print-opt:hover .stacked-imgs > :last-child {
   translate: -50% 0;
