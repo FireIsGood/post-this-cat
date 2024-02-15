@@ -200,9 +200,7 @@ h5 {
 }
 .hero-image {
   margin-inline: auto;
-  box-shadow:
-    2px 4px 8px 0 #0003,
-    4px 8px 16px 0 #0002;
+  box-shadow: 2px 4px 8px 0 #0003, 4px 8px 16px 0 #0002;
 }
 
 @media (width <= 600px) {
@@ -215,4 +213,23 @@ h5 {
   .hero-image-wrapper {
     max-height: 40vh;
   }
+}
+
+.fancy-hr {
+  --height: 120px;
+
+  overflow: visible;
+  display: grid;
+  place-items: center;
+  height: 0;
+  margin: calc(var(--height) / 2) 0px;
+}
+
+.fancy-hr::after {
+  content: url("./cat.svg");
+  transform-origin: center;
+  display: block;
+  background-color: white;
+  transform: translateY(-50%);
+  outline: 10px solid white;
 }
