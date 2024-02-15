@@ -98,6 +98,7 @@ main {
   width: min(var(--main-max-width), 100% - 2 * var(--main-margin));
   margin-inline: auto;
   font-family: var(--font-normal);
+  margin-bottom: 3rem;
 }
 
 main > * + * {
