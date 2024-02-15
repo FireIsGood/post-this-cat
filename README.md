@@ -23,3 +23,4 @@ Merge pull requests to the `main` branch.
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/) (Just the site content and PDF; the cat is from somewhere else)
+Literally 1984
