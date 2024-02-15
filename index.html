@@ -98,7 +98,7 @@
       </section>
     </main>
 
-    <modal style="display: none" id="print-modal">
+    <dialog id="print-modal">
       <button class="x-button" onclick="hideModal()">⨯</button>
       <div class="modal-content">
         <h1>Choose Your Fighter</h2>
@@ -126,7 +126,7 @@
           </a>
         </div>
       </div>
-    </modal>
+    </dialog>
 
     <script>
       function printpdf(url) {
@@ -141,11 +141,12 @@
       }
 
       const pm = document.getElementById("print-modal");
+      pm.close();
       function showModal() {
-        pm.style.display = "grid";
+        pm.showModal();
       }
       function hideModal() {
-        pm.style.display = "none";
+        pm.close();
       }
     </script>
   </body>
