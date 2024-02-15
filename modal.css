@@ -57,7 +57,6 @@
 }
 
 .stacked-imgs {
-  padding: 0rem 0 0 0;
   overflow: clip;
 
   & > img {
