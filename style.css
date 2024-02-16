@@ -91,14 +91,15 @@ h6 {
 
 body {
   color: var(--text-normal);
-  padding-top: 1rem;
 }
 
 main {
-  width: min(var(--main-max-width), 100% - 2 * var(--main-margin));
+  width: min(var(--main-max-width), 100%);
   margin-inline: auto;
+  padding: 1rem 1rem 3rem;
   font-family: var(--font-normal);
-  margin-bottom: 3rem;
+  background-color: white;
+  box-shadow: 0 0 18px -4px #0004;
 }
 
 main > * + * {
