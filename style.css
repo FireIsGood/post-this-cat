@@ -86,7 +86,7 @@ h6 {
 
   /* Animation speed */
   --speed-fast: 100ms;
-  --speed-medium: 300ms;
+  --speed-medium: 200ms;
 }
 
 body {

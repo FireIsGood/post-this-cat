@@ -97,10 +97,10 @@
 
 /* Animation */
 dialog {
-  animation: dialog-in 200ms ease-out forwards;
+  animation: dialog-in var(--speed-medium) ease-out forwards;
 
   &::backdrop {
-    animation: dialog-bg 200ms ease-out forwards;
+    animation: dialog-bg var(--speed-medium) ease-out forwards;
   }
 }
 
