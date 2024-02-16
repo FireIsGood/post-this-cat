@@ -1,19 +1,21 @@
-#print-modal[open] {
-  display: grid;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+#print-modal {
+  margin: auto;
   width: min(900px, 100%);
   max-height: 100%;
+  max-width: 100%;
 
+  padding: 0;
+  background: none;
+  border: unset;
+}
+
+#dialog-content {
   display: grid;
   grid-template-columns: 1fr;
 
+  background-color: white;
   border: 2px solid var(--text-normal);
   border-radius: 1rem;
-
-  background-color: white;
 
   & > * {
     grid-row-start: 1;
@@ -91,4 +93,32 @@
 .modal-header {
   display: flex;
   justify-content: right;
+}
+
+/* Animation */
+dialog {
+  animation: dialog-in 200ms ease-out forwards;
+
+  &::backdrop {
+    animation: dialog-bg 200ms ease-out forwards;
+  }
+}
+
+@keyframes dialog-in {
+  from {
+    opacity: 0;
+    translate: 0 10px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+@keyframes dialog-bg {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.75;
+  }
 }

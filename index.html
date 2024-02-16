@@ -106,31 +106,33 @@
     </main>
 
     <dialog id="print-modal">
-      <button class="x-button" onclick="hideModal()">⨯</button>
-      <div class="modal-content">
-        <h1>Choose Your Fighter</h2>
-        <div class="modal-columns">
-          <a
-            class="print-opt"
-            href="./post-this-cat-two-sided.pdf"
-            target="_blank"
-          >
-            <h3>Two-Sided</h3>
-            <div class="modal-imgs stacked-imgs">
-              <img src="./pdf-preview-back.jpg" />
-              <img src="./pdf-preview-front.jpg" />
+      <div id="dialog-content">
+        <button class="x-button" onclick="hideModal()">⨯</button>
+        <div class="modal-content">
+          <h1>Choose Your Fighter</h2>
+            <div class="modal-columns">
+              <a
+                class="print-opt"
+                href="./post-this-cat-two-sided.pdf"
+                target="_blank"
+              >
+                <h3>Two-Sided</h3>
+                <div class="modal-imgs stacked-imgs">
+                  <img src="./pdf-preview-back.jpg" />
+                  <img src="./pdf-preview-front.jpg" />
+                </div>
+              </a>
+              <a
+                class="print-opt"
+                href="./post-this-cat-one-sided.pdf"
+                target="_blank"
+              >
+                <h3>One-Sided</h3>
+                <div class="modal-imgs">
+                  <img src="./pdf-preview-one-sided.jpg" />
+                </div>
+              </a>
             </div>
-          </a>
-          <a
-            class="print-opt"
-            href="./post-this-cat-one-sided.pdf"
-            target="_blank"
-          >
-            <h3>One-Sided</h3>
-            <div class="modal-imgs">
-              <img src="./pdf-preview-one-sided.jpg" />
-            </div>
-          </a>
         </div>
       </div>
     </dialog>
@@ -147,13 +149,20 @@
         };
       }
 
-      const pm = document.getElementById("print-modal");
-      pm.close();
+      const dialog = document.getElementById("print-modal");
+
+      // Close when clicking out
+      dialog.addEventListener("click", (event) => {
+        if (event.target.id !== "dialog-content") {
+          dialog.close();
+        }
+      });
+
       function showModal() {
-        pm.showModal();
+        dialog.showModal();
       }
       function hideModal() {
-        pm.close();
+        dialog.close();
       }
     </script>
   </body>
