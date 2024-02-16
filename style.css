@@ -101,12 +101,12 @@ body {
     transparent 50px 100px;
   color: var(--text-normal);
   background-image: linear-gradient(var(--bg-overlay), var(--bg-overlay)),
-    url(./post-this-cat-bg.png), repeating-linear-gradient(var(--grid-gradient)),
-    repeating-linear-gradient(0.25turn, var(--grid-gradient));
+    url(./post-this-cat-bg.png),
+    url('data:image/svg+xml,<svg id="patternId" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="a" patternUnits="userSpaceOnUse" width="100" height="100"><rect x="0" y="0" fill="hsla(0,0%,100%,0)"/><path d="M 10,-2.55e-7 V 20 Z M -1.1677362e-8,10 H 20 Z" stroke-width="1" stroke="%23633300" fill="none"/></pattern></defs><rect width="100%" height="100%" transform="translate(0,0)" fill="url(%23a)"/></svg>');
   background-size: var(--bg-size);
   background-position:
     0 0,
-    left -50px top -50px,
+    left top,
     left top;
 }
 
@@ -120,15 +120,13 @@ body {
   from {
     background-position:
       0 0,
-      left -50px top -50px,
       left top,
       left top;
   }
   to {
     background-position:
       0 0,
-      calc(var(--bg-size) * 3 - 50px) calc(var(--bg-size) - 50px),
-      calc(var(--bg-size) * -4) calc(var(--bg-size) * -3),
+      calc(var(--bg-size) * 3) calc(var(--bg-size)),
       calc(var(--bg-size) * -4) calc(var(--bg-size) * -3);
   }
 }
