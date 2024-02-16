@@ -193,6 +193,7 @@ h5 {
 
 /* List items */
 .hero-list {
+  font-size: 2rem;
   list-style-type: "\1F431";
 }
 .hero-list > li {
