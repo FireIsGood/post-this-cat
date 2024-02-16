@@ -167,7 +167,7 @@ h5 {
   display: flex;
 }
 .print-link {
-  --transform-offset: 2px;
+  --transform-offset: 4px;
   display: inline-block;
   height: min-content;
   padding: 0.75rem 2rem;
@@ -190,7 +190,7 @@ h5 {
   transition: all var(--speed-fast) ease;
 
   &:hover {
-    --transform-offset: 4px;
+    --transform-offset: 6px;
   }
 }
 
