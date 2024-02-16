@@ -235,8 +235,8 @@ h5 {
   text-decoration: none;
 
   transition:
-    box-shadow var(--speed-fast) ease,
-    translate var(--speed-fast) ease;
+    box-shadow var(--speed-fast) linear,
+    translate var(--speed-fast) linear;
 
   &:hover {
     --transform-offset: 6px;
