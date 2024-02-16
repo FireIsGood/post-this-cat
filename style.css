@@ -110,7 +110,7 @@ body {
     left top;
 }
 
-@media (prefers-reduced-motion: no-preference) {
+@media (prefers-reduced-motion: no-preference) and (width > 600px) {
   body {
     animation: body-fade 25s linear infinite;
   }
