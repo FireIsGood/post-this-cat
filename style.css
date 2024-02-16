@@ -100,7 +100,7 @@ body {
 main {
   width: min(var(--main-max-width), 100%);
   margin-inline: auto;
-  padding: 1rem 1rem 3rem;
+  padding: 1rem clamp(1rem, 2.5vw, 2rem) 3rem;
   font-family: var(--font-normal);
   background-color: white;
   box-shadow: 0 0 18px -4px #0004;
