@@ -40,7 +40,11 @@ select {
 }
 
 /* Fix text overflow */
-p,
+p {
+  overflow-wrap: break-word;
+  text-wrap: pretty;
+}
+
 h1,
 h2,
 h3,
