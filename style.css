@@ -93,6 +93,12 @@ h6 {
   --speed-medium: 200ms;
 }
 
+/** Utility classes **/
+.space-children > * + * {
+  margin-top: 1em;
+}
+
+/** Main styles **/
 body {
   --bg-overlay: #fffd;
   --bg-lines: #633300;
@@ -185,9 +191,6 @@ h5 {
 /* Left side */
 .hero-text {
   grid-area: a;
-}
-.hero-text > * + * {
-  margin-top: 1em;
 }
 
 /* List items */
