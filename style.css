@@ -111,7 +111,7 @@ body {
     left top;
 }
 
-@media (prefers-reduced-motion: no-preference) {
+@media (prefers-reduced-motion: no-preference) and (width > 600px) {
   body {
     animation: body-fade 25s linear infinite;
   }
@@ -195,7 +195,7 @@ h5 {
 
 /* List items */
 .hero-list {
-  font-size: 2rem;
+  font-size: 1.25em;
   list-style-type: "\1F431";
 }
 .hero-list > li {
