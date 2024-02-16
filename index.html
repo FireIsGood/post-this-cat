@@ -153,7 +153,7 @@
 
       // Close when clicking out
       dialog.addEventListener("click", (event) => {
-        if (event.target.id !== "dialog-content") {
+        if (event.target.id === "print-modal") {
           dialog.close();
         }
       });
