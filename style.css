@@ -96,7 +96,7 @@ h6 {
 body {
   color: var(--text-normal);
   background-image: linear-gradient(#fffd, #fffd),
-    url(./favicon/android-chrome-512x512.png);
+    url(./favicon/android-chrome-192x192.png);
   background-size: 100px;
   background-position: center top -75px;
 }
