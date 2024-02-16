@@ -184,8 +184,7 @@ h5 {
   gap: 2rem;
   border: 2px solid var(--text-muted);
   border-radius: 1.5rem;
-  padding: 1rem 1.5rem;
-  padding-left: 1.75rem;
+  padding: 1.5rem;
 }
 
 /* Left side */
