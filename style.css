@@ -181,6 +181,7 @@ h5 {
   border: 2px solid var(--text-muted);
   border-radius: 1.5rem;
   padding: 1rem 1.5rem;
+  padding-left: 1.75rem;
 }
 
 /* Left side */
@@ -197,7 +198,10 @@ h5 {
   list-style-type: "\1F431";
 }
 .hero-list > li {
-  padding-left: 1ch;
+  padding-left: 0.75ch;
+}
+.hero-list > li:nth-child(2) {
+  list-style-type: "\1F639";
 }
 .hero-list > li:last-child {
   list-style-type: "\1F480";
