@@ -181,13 +181,15 @@ h5 {
   translate: calc(-1 * var(--transform-offset))
     calc(-1 * var(--transform-offset));
 
-  font-size: clamp(1.5rem, 3.5vw, 8rem);
+  font-size: clamp(2.5rem, 3.5vw, 3rem);
   font-weight: bold;
   font-family: var(--font-interactive);
   color: white;
   text-decoration: none;
 
-  transition: all var(--speed-fast) ease;
+  transition:
+    box-shadow var(--speed-fast) ease,
+    translate var(--speed-fast) ease;
 
   &:hover {
     --transform-offset: 6px;
