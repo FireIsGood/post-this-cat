@@ -195,6 +195,9 @@ h5 {
   &:hover {
     --transform-offset: 6px;
   }
+  &:active {
+    --transform-offset: 3px;
+  }
 }
 
 /* Right side */
