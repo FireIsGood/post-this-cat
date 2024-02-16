@@ -138,17 +138,6 @@
     </dialog>
 
     <script>
-      function printpdf(url) {
-        const iframe = document.createElement("iframe");
-        iframe.src = url;
-        iframe.style.display = "none";
-        document.body.appendChild(iframe);
-        iframe.focus();
-        iframe.onload = () => {
-          iframe.contentWindow.print();
-        };
-      }
-
       const dialog = document.getElementById("print-modal");
 
       // Close when clicking out
