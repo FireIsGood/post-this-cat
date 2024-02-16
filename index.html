@@ -3,11 +3,14 @@
 <html>
   <head>
     <title>Embed This Cat</title>
-    <meta content="Embed This Cat" property="og:title">
-    <meta content="Do it now." property="og:description">
-    <meta content="https://cat.robert.zip" property="og:url">
-    <meta content="https://cat.robert.zip/post-this-cat.jpg" property="og:image">
-    <meta content="#FFFFFF" name="theme-color">
+    <meta content="Embed This Cat" property="og:title" />
+    <meta content="Do it now." property="og:description" />
+    <meta content="https://cat.robert.zip" property="og:url" />
+    <meta
+      content="https://cat.robert.zip/post-this-cat.jpg"
+      property="og:image"
+    />
+    <meta content="#FFFFFF" name="theme-color" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
       rel="apple-touch-icon"
@@ -36,10 +39,7 @@
     <meta name="apple-mobile-web-app-title" content="Post This Cat" />
     <meta name="application-name" content="Post This Cat" />
     <meta name="msapplication-TileColor" content="#00aba9" />
-    <meta
-      name="msapplication-config"
-      content="/favicon/browserconfig.xml"
-    />
+    <meta name="msapplication-config" content="/favicon/browserconfig.xml" />
     <meta name="theme-color" content="#ffffff" />
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./modal.css" />
@@ -52,17 +52,13 @@
         <div class="hero-text space-children">
           <h2>Print This Cat!</h2>
           <ul class="hero-list">
-              <li>Spread the <del>word</del> cat</li>
+            <li>Spread the <del>word</del> cat</li>
             <li>Do a mild-to-moderate amount of trolling</li>
             <li class="list-special">They will never expect it</li>
           </ul>
         </div>
         <div class="button-container">
-          <button
-            onclick="{showModal()}"
-            href="#"
-            class="print-link"
-          >
+          <button onclick="{showModal()}" href="#" class="print-link">
             Print This Cat
           </button>
         </div>
@@ -78,8 +74,8 @@
       <section class="space-children">
         <h2>Guidelines</h2>
         <p>
-          We aren't here to be disruptive, just surprising! Please
-          consider these guidelines to how you should Post This Cat:
+          We aren't here to be disruptive, just surprising! Please consider
+          these guidelines to how you should Post This Cat:
         </p>
         <ul>
           <li>
@@ -96,11 +92,16 @@
           </li>
         </ul>
       </section>
-      <hr class="fancy-hr">
+
+      <hr class="fancy-hr" />
+
       <section class="space-children">
         <h2>About This Site</h2>
         <p>
-          Found a bug? Want to make improvements? <a href="https://github.com/FireIsGood/post-this-cat">Open an issue or submit a PR!</a>
+          Found a bug? Want to make improvements?
+          <a href="https://github.com/FireIsGood/post-this-cat"
+            >Open an issue or submit a PR!</a
+          >
         </p>
       </section>
     </main>
@@ -110,29 +111,29 @@
         <button class="x-button" onclick="hideModal()">⨯</button>
         <div class="modal-content">
           <h2>Choose Your Fighter</h2>
-            <div class="modal-columns">
-              <a
-                class="print-opt"
-                href="./post-this-cat-two-sided.pdf"
-                target="_blank"
-              >
-                <h3>Two-Sided</h3>
-                <div class="modal-imgs stacked-imgs">
-                  <img src="./pdf-preview-back.jpg" />
-                  <img src="./pdf-preview-front.jpg" />
-                </div>
-              </a>
-              <a
-                class="print-opt"
-                href="./post-this-cat-one-sided.pdf"
-                target="_blank"
-              >
-                <h3>One-Sided</h3>
-                <div class="modal-imgs">
-                  <img src="./pdf-preview-one-sided.jpg" />
-                </div>
-              </a>
-            </div>
+          <div class="modal-columns">
+            <a
+              class="print-opt"
+              href="./post-this-cat-two-sided.pdf"
+              target="_blank"
+            >
+              <h3>Two-Sided</h3>
+              <div class="modal-imgs stacked-imgs">
+                <img src="./pdf-preview-back.jpg" />
+                <img src="./pdf-preview-front.jpg" />
+              </div>
+            </a>
+            <a
+              class="print-opt"
+              href="./post-this-cat-one-sided.pdf"
+              target="_blank"
+            >
+              <h3>One-Sided</h3>
+              <div class="modal-imgs">
+                <img src="./pdf-preview-one-sided.jpg" />
+              </div>
+            </a>
+          </div>
         </div>
       </div>
     </dialog>
