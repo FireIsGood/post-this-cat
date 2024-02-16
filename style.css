@@ -94,11 +94,43 @@ h6 {
 }
 
 body {
+  --bg-overlay: #fffd;
+  --bg-lines: #633300;
+  --bg-size: 100px;
+  --grid-gradient: transparent 0 48px, var(--bg-lines) 48px 50px,
+    transparent 50px 100px;
   color: var(--text-normal);
-  background-image: linear-gradient(#fffd, #fffd),
-    url(./favicon/android-chrome-192x192.png);
-  background-size: 100px;
-  background-position: center top -75px;
+  background-image: linear-gradient(var(--bg-overlay), var(--bg-overlay)),
+    url(./post-this-cat-bg.png), repeating-linear-gradient(var(--grid-gradient)),
+    repeating-linear-gradient(0.25turn, var(--grid-gradient));
+  background-size: var(--bg-size);
+  background-position:
+    0 0,
+    left -50px top -50px,
+    left top;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  body {
+    animation: body-fade 25s linear infinite;
+  }
+}
+
+@keyframes body-fade {
+  from {
+    background-position:
+      0 0,
+      left -50px top -50px,
+      left top,
+      left top;
+  }
+  to {
+    background-position:
+      0 0,
+      calc(var(--bg-size) * 3 - 50px) calc(var(--bg-size) - 50px),
+      calc(var(--bg-size) * -4) calc(var(--bg-size) * -3),
+      calc(var(--bg-size) * -4) calc(var(--bg-size) * -3);
+  }
 }
 
 main {
