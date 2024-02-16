@@ -25,3 +25,5 @@ Merge pull requests to the `main` branch.
 [MIT](https://choosealicense.com/licenses/mit/) (Just the site content and PDF; the cat is from somewhere else)
 
 Literally 1984
+
+𝐋𝐢𝐭𝐞𝐫𝐚𝐥𝐥𝐲 🯱🯹🯸🯴
