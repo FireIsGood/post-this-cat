@@ -118,11 +118,11 @@ body {
 
 @media (prefers-reduced-motion: no-preference) and (width > 600px) {
   body {
-    animation: body-fade 25s linear infinite;
+    animation: body-animate 25s linear infinite;
   }
 }
 
-@keyframes body-fade {
+@keyframes body-animate {
   from {
     background-position:
       0 0,
