@@ -251,6 +251,7 @@ h5 {
 
   &:hover {
     --transform-offset: 6px;
+    cursor: pointer;
   }
   &:active {
     --transform-offset: 3px;
